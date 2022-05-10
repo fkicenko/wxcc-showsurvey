@@ -1,4 +1,5 @@
 import { Desktop } from "@wxcc-desktop/sdk";
+import { timeStamp } from "console";
 import {  ENTER_KEY_CODE, SPACE_KEY_CODE } from "./constants";
 import { agentId } from "./index";
 
@@ -19,6 +20,15 @@ export const getTimestampInLocale = (timestamp: number): string => {
 export const getTimeNow = () : number => {
   var rightNow : number = new Date().getTime();
   return rightNow;
+}
+export const evaluateTimeLimit = () : boolean => {
+  var lsLastTime = localStorage.getItem("surveyDuration");
+  var lsTimestamp = parseInt(lsLastTime? lsLastTime : "");
+  var rightNow = getTimeNow();
+  var delta = rightNow - lsTimestamp;
+  console.log("Delta: " + delta);
+  return (delta < 14400000) ? false : true;
+  
 }
 export const showLocalStorage = () : void => {
   var i;

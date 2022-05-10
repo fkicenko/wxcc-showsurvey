@@ -25,7 +25,7 @@ import {
   SPACE_KEY_CODE,
   TYPE_FEEDBACK_HERE,
 } from "../constants";
-import { checkIfSpaceOrEnterKeydown, getTimestampInLocale, getTimeNow, showLocalStorage } from "../Utils";
+import { checkIfSpaceOrEnterKeydown, getTimestampInLocale, getTimeNow, showLocalStorage, evaluateTimeLimit } from "../Utils";
 import { EventEmitter } from "stream";
 const Axios = require("Axios");
 const {
@@ -344,9 +344,8 @@ export default class ShowSurvey extends LitElement {
       console.log("Connected....");
       showLocalStorage();
       this.timeStart = getTimeNow();
-      var surveyTime: string | null = localStorage.getItem("surveyDuration");
       console.log("Submission Time: " + new Date(this.timeStart));
-      if((this.timeStart - parseInt(surveyTime? surveyTime : "") < this.timeStart / (60*60*1000))) {
+      if(!evaluateTimeLimit()) {
         console.log("Error: Multiple Surveys attempted within 4 hrs.");
         this.closeSurvey();
       }
