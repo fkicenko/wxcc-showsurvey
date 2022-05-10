@@ -345,6 +345,7 @@ export default class ShowSurvey extends LitElement {
       showLocalStorage();
       this.timeStart = getTimeNow();
       var surveyTime: string | null = localStorage.getItem("surveyDuration");
+      console.log("Submission Time: " + new Date(this.timeStart));
       if((this.timeStart - parseInt(surveyTime? surveyTime : "") < this.timeStart / (60*60*1000))) {
         console.log("Error: Multiple Surveys attempted within 4 hrs.");
         this.closeSurvey();

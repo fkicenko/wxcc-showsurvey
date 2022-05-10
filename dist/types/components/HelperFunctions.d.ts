@@ -1,6 +1,7 @@
 export declare class WxmConnection {
     formBody: string[];
     urlString: string;
+    errMsg: string;
     bodyParameters: {
         userName: string;
         password: string;
@@ -9,8 +10,9 @@ export declare class WxmConnection {
     access_token: string;
     survey_id: string;
     constructor();
-    private urlEncode;
-    getAPIToken(): void;
+    getStatus(): string;
+    urlEncode(details: any): void;
+    getAPIToken: () => Promise<void>;
     getSurveyToken(): void;
     surveyByToken(dt: object): void;
 }
