@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "sourceMap": true,
+    "declarationDir": "../dist/types",
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./*"],
+      "@css/*": ["./assets/styles/*"],
+      "@img/*": ["./assets/images/*"],
+    }
+  },
+  "include": ["**/*.ts", "components/WxmTask.js"]
+}

@@ -1,0 +1,397 @@
+/**
+ * Copyright (c) Cisco Systems, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+@import "../assets/styles/variables";
+
+$color_1: #ffffff;
+$color_2: #fff;
+$color_3: #424242;
+$font-family_1: "Cisco Sans", sans-serif;
+$font-family_2: "Cisco Sans", sans-serif;
+$background-color_1: #00bceb;
+$background-color_2: rgb(238, 83, 65);
+$background-color_3: rgb(196, 68, 65);
+$background-color_4: rgb(230, 171, 17);
+$background-color_5: rgb(104, 153, 107);
+$background-color_6: rgb(255, 188, 0);
+$background-color_7: rgb(126, 183, 127);
+
+/* open sans font-family using all over the page  */
+/* login page fixing it in center */
+/* button submit UI */
+/*  cooment box ui settings */
+/* Nps survey ui */
+/* Nps legend dasktop view */
+/* Nps legend dasktop view */
+/* star rating ui block */
+/* textarea ui block */
+/* hoving styles */
+
+:host {
+  display: block;
+  background-color: var(--md-primary-bg-color);
+  --notes-widget-header-height: 5rem;
+  --notes-action-footer-height: 3.5rem;
+  --notes-card-left-border: 3px solid;
+  --notes-card-height: 50px;
+  --notes-card-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16), 0px 0px 1px rgba(0, 0, 0, 0.18);
+  --border: 1px solid var(--md-menu-overlay-border-color);
+  color: var(--md-primary-text-color);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-family_1;
+  margin: 0;
+  visibility: hidden;
+}
+textarea {
+  font-family: $font-family_1;
+  overflow: auto;
+  padding: 5px 0 5px 10px !important;
+  outline: none;
+  border: 1px solid;
+  border-radius: 3px;
+}
+input {
+  font-family: $font-family_1;
+}
+select {
+  font-family: $font-family_1;
+}
+.theme-toggle {
+  .overlay-menu::part(overlay-content) {
+    width: 456px;
+    height: 358px;
+    overflow: visible;
+  }
+}
+.menu-overlay {
+  
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 3%;
+
+  background: #FFFFFF;
+  border-radius: 8px;
+  
+}
+text {
+  font-family: $font-family_1;
+}
+.overlay-title {
+  position: absolute;
+  width: 92px;
+  height: 21px;
+  left: 16px;
+  top: 16px;
+
+  /* 14 • Body/Bold */
+  font-family: "CiscoSans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+
+  /* identical to box height, or 21px */
+
+  /* textColor/primary-lightUi */
+  color: #121212;
+}
+.feedback-editor-wrapper {
+  
+  padding: 0.5rem 0.75rem 0.75rem 1rem;
+  box-sizing: border-box;
+  margin: 0.9rem 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  // border-left: var(--notes-card-left-border);
+  background-color: var(--md-primary-two-bg-color);
+  box-shadow: var(--notes-card-box-shadow);
+
+  .feedback-editor-content-input::part(md-input-container) {
+    height: 100%;
+    margin: 0;
+  }
+
+  .feedback-editor-content-input::part(input) {
+    border: none;
+    font-size: small;
+    padding: 0;
+    height: var(--notes-card-height);
+    max-height: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    background-color: var(--md-primary-two-bg-color);
+    color: var(--md-primary-text-color);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.feedback-editor-footer {
+  display: flex;
+  agentx-wc-notes-colors {
+    flex: 1;
+  }
+  .feedback-char-counter,
+  .word-count {
+    font-family: $font-family_1;
+    margin-right: 0.75rem;
+    margin-left: 260px;
+    color: var(--md-secondary-text-color);
+    white-space:pre;
+  }
+}
+.feedback-favorite-btn {
+  display:inline-block;
+  height: 25.998743057250977px;
+  width: 26.001550674438477px;
+  /* left: 0.99951171875px;
+  top: 1.0001068115234375px; */
+  border-radius: 0px;
+
+  margin-right: 0.5rem;
+  padding: 0 1px;
+}
+.favorite {
+  display:inline-block;
+  height: 25.998743057250977px;
+  width: 26.001550674438477px;
+  /* left: 0.99951171875px;
+  top: 1.0001068115234375px; */
+  border-radius: 0px;
+
+  margin-right: 0.5rem;
+  padding: 0 1px;
+  /* margin-right: 0.5rem;
+  padding: 0 1px; */
+  color: var(--md-yellow-40);
+}
+
+.login {
+  margin: auto;
+  background: #fff;
+  border-radius: 3px;
+  p {
+    margin-bottom: 30px;
+  }
+  .form__group {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 11px;
+    padding-bottom: 11px;
+ }
+}
+
+.button-submit {
+  min-height: 48px;
+  min-width: 120px;
+  line-height: 36px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: $background-color_1;
+  border-radius: 2px;
+  border: none;
+  color: $color_3;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 16px;
+  cursor: pointer;
+  outline: none;
+  font-family: $font-family_2;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  //margin-bottom: 15px;
+}
+
+span {
+  font-size: 14px;
+  font-family: $font-family_1;
+}
+p {
+  height: 42px;
+  width: 292px;
+  left: 0px;
+  top: 0px;
+  border-radius: nullpx;
+  padding-left: 38px;
+  padding-right: 38px;
+  //padding-top: 24px;
+
+  /* font-family: $font-family_1;
+  font-size: 14px; */
+}
+.question-text {
+  span {
+    font-size: 20px;
+    text-align: left;
+    > span {
+      float: left;
+      margin: 0;
+    }
+  }
+  margin: 20px 0 20px 0;
+}
+.header-title {
+  margin-top: 5px;
+  font-family: "Cisco Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+.question-header {
+  position: fixed;
+  width: 292px;
+  height: 42px;
+  left: 0px;
+  top: 0px;
+  justify-content: center;
+
+/* 14 • Body/Regular */
+font-family: 'CiscoSans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+
+/* or 21px */
+text-align: center;
+
+/* textColor/primary-lightUi */
+color: #121212;
+ 
+}
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  cursor: pointer;
+}
+.blocks.rating-icon {
+  pointer-events: auto;
+  cursor: pointer;
+  width: calc((100% - 32px) / 5);
+  height: auto;
+  margin-right: 8px;
+}
+.rating-icon:focus {
+  outline: 3px solid orange;
+}
+.outer-div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //width: 70%;
+}
+.text {
+  span {
+    &:first-child {
+      text-align: left;
+      display: block;
+      width: 100px;
+      float: left;
+      font-style: italic;
+    }
+    &:last-child {
+      text-align: right;
+      right: 12px;
+      position: relative;
+      display: block;
+      margin-top: 8px;
+      font-style: italic;
+    }
+  }
+}
+.comment {
+  margin-top: 5px;
+  font-family: $font-family_1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+.md-input {
+  height: 100px;
+  width: 300px;
+  left: 0px;
+  top: 0px;
+  border-radius: 4px;
+}
+.dec {
+  background-color: $background-color_2;
+  &:hover {
+    background-color: $background-color_3 !important;
+  }
+}
+.passive {
+  &:hover {
+    background-color: $background-color_4 !important;
+  }
+  background-color: $background-color_6;
+}
+.promoter {
+  &:hover {
+    background-color: $background-color_5 !important;
+  }
+  background-color: $background-color_7;
+}
+#thank-you {
+  display: none;
+}
+
+div#preloader {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: -24%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media screen and (max-width: 1380px) and (min-width: 768px) {
+  .scale-legend {
+    font-size: 16px;
+    color: $color_3;
+    font-weight: 400;
+  }
+}
+
+md-menu-overlay::part(overlay-content) {
+  overflow: visible;
+}
+
+.survey-widget-container {
+  width: 100%;
+  height: 500px;
+}
+
+.survey-btn::part(button) {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.survey-btn::part(button):active {
+  background-color: var(--button-white-pressed-bg-color);
+}
+
+.survey-btn::part(button):hover {
+  background-color: var(--button-white-hover-bg-color);
+}
+md-icon:focus {
+  background-color: var(--md-input-background-theme-disabled);
+}
