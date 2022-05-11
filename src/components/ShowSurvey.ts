@@ -353,7 +353,6 @@ export default class ShowSurvey extends LitElement {
     }
     else {
       this.isConnected = true; 
-      console.log("Sending to Connection Error!")
       this.showConnectionError(this.wxm.errMsg);
     } 
     console.log("Connected Already!");
